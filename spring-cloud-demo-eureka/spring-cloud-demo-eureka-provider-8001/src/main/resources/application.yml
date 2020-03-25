@@ -5,9 +5,9 @@ spring:
   application:
     name: user-provider
   datasource:
-    url: jdbc:mysql://192.168.0.103:3306/demo
+    url: jdbc:mysql://123.57.164.79:3306/web
     username: root
-    password: 123456
+    password: rancho123456
     druid:
       initial-size: 5
       min-idle: 10
@@ -27,7 +27,8 @@ eureka:
     register-with-eureka: true #注册到Eureka的注册中心
     fetch-registry: true #获取注册实例列表
     service-url:
-      defaultZone: http://localhost:7001/eureka/ #配置注册中心地址
+      #defaultZone: http://localhost:7001/eureka/ #配置注册中心地址
+      defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/ #配置注册中心地址
 
 
 #info:
