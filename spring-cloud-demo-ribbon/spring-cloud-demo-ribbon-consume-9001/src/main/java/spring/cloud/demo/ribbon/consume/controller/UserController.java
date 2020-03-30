@@ -1,4 +1,4 @@
-package spring.cloud.demo.eureka.consume.controller;
+package spring.cloud.demo.ribbon.consume.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
