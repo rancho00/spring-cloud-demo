@@ -48,6 +48,6 @@ public class UserController {
     @GetMapping(value = "/getPort")
     @ResponseBody
     public String getPort(){
-        return "8001";
+        return "8002";
     }
 }

@@ -27,4 +27,10 @@ public class UserController {
     public Object discovery(){
         return restTemplate.getForObject("http://USER-PROVIDER/user/discovery",Object.class);
     }
+
+    @GetMapping("/getPort")
+    @ResponseBody
+    public String getPort(){
+        return restTemplate.getForObject("http://USER-PROVIDER/user/getPort",String.class);
+    }
 }
