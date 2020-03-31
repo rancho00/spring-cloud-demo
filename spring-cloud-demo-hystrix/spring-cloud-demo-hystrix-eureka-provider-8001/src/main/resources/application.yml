@@ -28,3 +28,8 @@ eureka:
     fetch-registry: true #获取注册实例列表
     service-url:
       defaultZone: http://eureka7001.com:7001/eureka/ #配置注册中心地址
+management:
+  endpoints:
+    web:
+      exposure:
+        include: hystrix.stream
