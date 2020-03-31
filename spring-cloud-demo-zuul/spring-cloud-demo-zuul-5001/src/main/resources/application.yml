@@ -1,0 +1,20 @@
+server:
+  port: 5001
+
+
+spring:
+  application:
+    name: zuul-gateway
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka/
+zuul:
+  routes:
+    user.serviceId: user-provider
+    user.path: /user/**
+  ignored-services: "*"
+  prefix: /rancho

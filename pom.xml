@@ -8,4 +8,8 @@
     <artifactId>spirng-cloud-demo</artifactId>
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>spring-cloud-demo-zuul</module>
+        <module>spring-cloud-demo-config</module>
+    </modules>
 </project>
