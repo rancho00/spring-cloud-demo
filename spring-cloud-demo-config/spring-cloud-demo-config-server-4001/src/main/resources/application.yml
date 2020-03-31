@@ -1,0 +1,12 @@
+server:
+  port: 4001
+spring:
+  application:
+    name: config-server
+  profiles:
+    active: native
+  cloud:
+    config:
+      server:
+        native:
+          search-locations: "E:/IdeaProjects/rancho-demo-master/spring-cloud-demo/spring-cloud-demo-config"

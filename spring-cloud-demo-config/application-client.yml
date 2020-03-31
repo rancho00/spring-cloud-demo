@@ -1,0 +1,17 @@
+spring:
+  profiles:
+    active:
+      -dev
+---
+spring:
+  profiles: dev
+  application: client
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka/
+
+---
+spring:
+  profiles: prod
+  applicaiont: prod

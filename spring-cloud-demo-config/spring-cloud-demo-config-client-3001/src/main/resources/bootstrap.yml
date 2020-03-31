@@ -1,0 +1,11 @@
+#系统级的，优先级更高
+server:
+  port: 3001
+
+spring:
+  cloud:
+    config:
+      name: applicaiont-client
+      profile: dev
+      label: master
+      uri: http://config4001.com:4001

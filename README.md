@@ -8,7 +8,8 @@ spring-cloud-demo包含Spring cloud多个模块，每个模块都是最基础的
 |spring-cloud-demo-ribbon|springCloud-ribbon负载均衡-和eureka一起使用|
 |spring-cloud-demo-feign|springCloud-feign负载均衡-和eureka一起使用|
 |spring-cloud-demo-hystrix|springCloud-hystrix断路器-和eureka一起使用|
-
+|spring-cloud-demo-zuul|springCloud-zuul路由网关-和eureka一起使用|
+|spring-cloud-demo-config|springCloud-config配置文件|
 
 # Spring Cloud学习教程
 
