@@ -58,4 +58,11 @@ public class UserController {
     public String getPortHystrix(){
         return "getPortHystrix";
     }
+
+    @GetMapping(value = "/getPort1")
+    @ResponseBody
+    public String getPort1(){
+        throw new RuntimeException();
+        //return "8001";
+    }
 }
