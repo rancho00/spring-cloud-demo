@@ -1,0 +1,11 @@
+server:
+  port: 9001
+
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: true
+    service-url:
+      defaultZone: http://192.168.0.101:7001/eureka/
+
+

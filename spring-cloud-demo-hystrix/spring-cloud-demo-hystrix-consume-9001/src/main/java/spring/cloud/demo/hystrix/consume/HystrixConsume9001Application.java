@@ -1,4 +1,4 @@
-package spring.cloud.demo.ribbon.consume;
+package spring.cloud.demo.hystrix.consume;
 
 import com.netflix.loadbalancer.IRule;
 import com.netflix.loadbalancer.RandomRule;
@@ -11,10 +11,10 @@ import org.springframework.web.client.RestTemplate;
 
 @EnableEurekaClient
 @SpringBootApplication
-public class RibbonConsume9001Application {
+public class HystrixConsume9001Application {
 
     public static void main(String[] args) {
-        SpringApplication.run(RibbonConsume9001Application.class,args);
+        SpringApplication.run(HystrixConsume9001Application.class,args);
     }
 
     @Bean(value = "restTemplate")
