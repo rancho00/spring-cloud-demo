@@ -1,5 +1,7 @@
 package spring.cloud.demo.hystrix.eureka.provider.controller;
 
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
+import com.netflix.ribbon.proxy.annotation.Hystrix;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
@@ -46,8 +48,14 @@ public class UserController {
     }
 
     @GetMapping(value = "/getPort")
+    @HystrixCommand(fallbackMethod = "getPortHystrix")
     @ResponseBody
     public String getPort(){
-        return "8001";
+        throw new RuntimeException();
+        //return "8001";
+    }
+
+    public String getPortHystrix(){
+        return "getPortHystrix";
     }
 }
