@@ -3,9 +3,12 @@ spring:
     active:
       -dev
 ---
+server:
+  port: 3001
 spring:
   profiles: dev
-  application: client
+  application:
+    name: user-provider
 eureka:
   client:
     service-url:
