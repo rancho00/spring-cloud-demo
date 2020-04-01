@@ -3,7 +3,7 @@ server:
 
 eureka:
   instance:
-    hostname: eureka7001.com
+    hostname: eureka7001.com  #eureka中的实例名
     #hostname: localhost
   client:
     register-with-eureka: false #不注册自己

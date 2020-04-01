@@ -12,12 +12,14 @@
     <artifactId>spring-cloud-demo-eureka-server-7001</artifactId>
 
     <dependencies>
+        <!--eureka服务端-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
         </dependency>
     </dependencies>
 
+    <!--spring cloud-->
     <dependencyManagement>
         <dependencies>
             <dependency>
