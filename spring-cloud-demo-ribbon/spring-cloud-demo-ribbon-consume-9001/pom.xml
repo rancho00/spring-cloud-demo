@@ -13,17 +13,20 @@
 
 
     <dependencies>
-        <!--springboot-->
+        <!--web组件-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
+
+        <!--eureka客户端-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+            <artifactId>spring-cloud-starter-netflix-ribbon</artifactId>
         </dependency>
     </dependencies>
 
+    <!--spring-cloud-->
     <dependencyManagement>
         <dependencies>
             <dependency>
