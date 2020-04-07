@@ -21,48 +21,10 @@ public class UserController {
     @Autowired
     private UserMapper userMapper;
 
-    @Autowired
-    private DiscoveryClient discoveryClient;
-
     @GetMapping
     @ResponseBody
     public List<User> list(){
         return userMapper.list();
     }
 
-    @GetMapping(value = "/discovery")
-    @ResponseBody
-    public Object discovery(){
-        List<String> services=discoveryClient.getServices();
-        System.out.println(services);
-        List<ServiceInstance> list=discoveryClient.getInstances("USER");
-        list.forEach(serviceInstance -> {
-            System.out.println(
-                    serviceInstance.getServiceId()+"\t"+
-                            serviceInstance.getHost()+"\t"+
-                            serviceInstance.getPort()+"\t"+
-                            serviceInstance.getUri()
-            );
-        });
-        return this.discoveryClient;
-    }
-
-    @GetMapping(value = "/getPort")
-    @HystrixCommand(fallbackMethod = "getPortHystrix")
-    @ResponseBody
-    public String getPort(){
-        throw new RuntimeException();
-        //return "8001";
-    }
-
-    public String getPortHystrix(){
-        return "getPortHystrix";
-    }
-
-    @GetMapping(value = "/getPort1")
-    @ResponseBody
-    public String getPort1(){
-        throw new RuntimeException();
-        //return "8001";
-    }
 }

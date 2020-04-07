@@ -5,9 +5,9 @@ spring:
   application:
     name: user-provider
   datasource:
-    url: jdbc:mysql://123.57.164.79:3306/web
+    url: jdbc:mysql://localhost:3306/spring-cloud-demo
     username: root
-    password: rancho123456
+    password: 123456
     druid:
       initial-size: 5
       min-idle: 10
@@ -28,6 +28,8 @@ eureka:
     fetch-registry: true #获取注册实例列表
     service-url:
       defaultZone: http://eureka7001.com:7001/eureka/ #配置注册中心地址
+
+#
 management:
   endpoints:
     web:

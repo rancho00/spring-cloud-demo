@@ -8,11 +8,11 @@ import spring.cloud.demo.hystrix.feign.consume.component.UserServiceFallbackFact
  * feign->面向接口的负载均衡
  */
 @FeignClient(value = "USER-PROVIDER",fallbackFactory = UserServiceFallbackFactory.class)
-public interface UserService {
+public interface SysService {
 
-    @RequestMapping("/user/getPort")
+    @RequestMapping("/sys/getPort")
     String getPort();
 
-    @RequestMapping("/user/getPort1")
+    @RequestMapping("/sys/getPort1")
     String getPort1();
 }

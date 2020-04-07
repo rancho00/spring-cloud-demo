@@ -2,13 +2,13 @@ package spring.cloud.demo.hystrix.feign.consume.component;
 
 import feign.hystrix.FallbackFactory;
 import org.springframework.stereotype.Component;
-import spring.cloud.demo.hystrix.feign.consume.service.UserService;
+import spring.cloud.demo.hystrix.feign.consume.service.SysService;
 
 @Component
-public class UserServiceFallbackFactory implements FallbackFactory<UserService> {
+public class UserServiceFallbackFactory implements FallbackFactory<SysService> {
     @Override
-    public UserService create(Throwable throwable) {
-        return new UserService() {
+    public SysService create(Throwable throwable) {
+        return new SysService() {
             @Override
             public String getPort() {
                 return "getPort出错";

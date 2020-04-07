@@ -7,6 +7,8 @@ eureka:
     fetch-registry: true
     service-url:
       defaultZone: http://eureka7001.com:7001/eureka/
+
+#开启消费端降级机制
 feign:
   hystrix:
     enabled: true
