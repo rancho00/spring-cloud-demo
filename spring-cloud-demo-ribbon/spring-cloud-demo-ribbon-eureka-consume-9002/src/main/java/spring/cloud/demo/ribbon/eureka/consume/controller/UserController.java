@@ -1,27 +1,28 @@
-package spring.cloud.demo.ribbon.eureka.provider.controller;
+package spring.cloud.demo.ribbon.eureka.consume.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.client.ServiceInstance;
-import org.springframework.cloud.client.discovery.DiscoveryClient;
+import org.springframework.cloud.client.loadbalancer.LoadBalancerClient;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
-import spring.cloud.demo.ribbon.eureka.provider.entity.User;
-import spring.cloud.demo.ribbon.eureka.provider.mapper.UserMapper;
+import org.springframework.web.client.RestTemplate;
 
-import java.util.List;
+import java.net.URI;
 
-@RequestMapping("/user")
+
 @Controller
+@RequestMapping("/user")
 public class UserController {
 
+
     @Autowired
-    private UserMapper userMapper;
+    private RestTemplate restTemplate;
 
     @GetMapping
     @ResponseBody
-    public List<User> list(){
-        return userMapper.list();
+    public Object getUsers(){
+        return restTemplate.getForObject("http://USER-PROVIDER/user",Object.class);
     }
 }

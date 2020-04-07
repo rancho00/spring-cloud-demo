@@ -5,6 +5,6 @@ ribbon:
   eureka:
     enabled: false
 
-user-provider:
+user-provider: #服务id，需要和loadBalancer.choose一直
   ribbon:
-    listOfServers: eureka7001.com:7001,eureka7002.com:7002,eureka7003.com:7003
+    listOfServers: localhost:8001,localhost:8002,localhost:8003
