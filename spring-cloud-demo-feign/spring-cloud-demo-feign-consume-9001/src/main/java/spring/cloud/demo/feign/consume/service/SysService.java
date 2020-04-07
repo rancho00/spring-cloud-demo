@@ -7,8 +7,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
  * feign->面向接口的负载均衡
  */
 @FeignClient("USER-PROVIDER")
-public interface UserService {
+public interface SysService {
 
-    @RequestMapping("/user/getPort")
+    @RequestMapping("/sys/getPort")
     String getPort();
 }
