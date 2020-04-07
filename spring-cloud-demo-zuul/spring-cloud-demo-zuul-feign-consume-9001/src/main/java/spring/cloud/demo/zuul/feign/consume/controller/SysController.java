@@ -5,25 +5,25 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
-import spring.cloud.demo.zuul.feign.consume.service.UserService;
+import spring.cloud.demo.zuul.feign.consume.service.SysService;
 
 
 @Controller
-@RequestMapping("/user")
-public class UserController {
+@RequestMapping("/sys")
+public class SysController {
 
    @Autowired
-   private UserService userService;
+   private SysService sysService;
 
     @GetMapping("/getPort")
     @ResponseBody
     public String getPort(){
-        return userService.getPort();
+        return sysService.getPort();
     }
 
     @GetMapping("/getPort1")
     @ResponseBody
     public String getPort1(){
-        return userService.getPort1();
+        return sysService.getPort1();
     }
 }

@@ -12,9 +12,10 @@ eureka:
     fetch-registry: true
     service-url:
       defaultZone: http://eureka7001.com:7001/eureka/
+
 zuul:
-  routes:
+  routes: #代理的routes
     user.serviceId: user-provider
-    user.path: /user/**
-  ignored-services: "*"
-  prefix: /rancho
+    user.path: /sys/*
+  ignored-services: "*" #忽略原真实服务名
+  prefix: /rancho #统一前缀
