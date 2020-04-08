@@ -11,6 +11,7 @@ spring-cloud-demo包含Spring cloud多个模块，每个模块都是最基础的
 |spring-cloud-demo-zuul|springCloud-zuul路由网关|
 |spring-cloud-demo-config|springCloud-config配置文件|
 |spring-cloud-demo-zookeeper|springCloud-zookeeper服务注册与发现|
+|spring-cloud-demo-consul|springCloud-consul服务注册与发现|
 
 # Spring Cloud学习教程
 
