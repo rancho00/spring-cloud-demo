@@ -5,7 +5,7 @@ import org.springframework.stereotype.Component;
 import spring.cloud.demo.hystrix.feign.consume.service.SysService;
 
 @Component
-public class UserServiceFallbackFactory implements FallbackFactory<SysService> {
+public class SysServiceFallbackFactory implements FallbackFactory<SysService> {
     @Override
     public SysService create(Throwable throwable) {
         return new SysService() {

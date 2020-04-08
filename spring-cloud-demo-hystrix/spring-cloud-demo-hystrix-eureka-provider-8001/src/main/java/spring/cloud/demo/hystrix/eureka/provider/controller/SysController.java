@@ -1,6 +1,8 @@
 package spring.cloud.demo.hystrix.eureka.provider.controller;
 
+import com.netflix.hystrix.contrib.javanica.annotation.DefaultProperties;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixProperty;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
@@ -14,6 +16,7 @@ import java.util.List;
 
 @RequestMapping("/sys")
 @Controller
+@DefaultProperties(defaultFallback = "sysFallback")
 public class SysController {
 
     @Autowired
@@ -37,7 +40,9 @@ public class SysController {
     }
 
     @GetMapping(value = "/getPort")
-    @HystrixCommand(fallbackMethod = "getPortHystrix")
+    @HystrixCommand(fallbackMethod = "getPortHystrix", commandProperties = {
+            @HystrixProperty(name = "execution.isolation.thread.timeoutInMilliseconds",value = "3000")
+    })
     @ResponseBody
     public String getPort(){
         throw new RuntimeException();
@@ -53,5 +58,10 @@ public class SysController {
     public String getPort1(){
         throw new RuntimeException();
         //return "8001";
+    }
+
+
+    public String sysFallback(){
+        return "000";
     }
 }

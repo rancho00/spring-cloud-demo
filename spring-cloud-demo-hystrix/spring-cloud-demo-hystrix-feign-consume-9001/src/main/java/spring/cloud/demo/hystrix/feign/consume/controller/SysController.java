@@ -1,5 +1,7 @@
 package spring.cloud.demo.hystrix.feign.consume.controller;
 
+import com.netflix.hystrix.contrib.javanica.annotation.DefaultProperties;
+import javafx.beans.DefaultProperty;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -26,4 +28,5 @@ public class SysController {
     public String getPort1(){
         return sysService.getPort1();
     }
+
 }
