@@ -29,13 +29,15 @@ eureka:
     service-url:
       #defaultZone: http://localhost:7001/eureka/ #配置注册中心地址
       defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/ #配置注册中心地址
+  instance:
+    instance-id: user8001
+    prefer-ip-address: true
 
 
 #info:
-#  app.name: user
+#  app.name: user-provider
 #  build.artifactId: @project.artifactId@
 #  build.version: @project.version@
-#
 
 
 
