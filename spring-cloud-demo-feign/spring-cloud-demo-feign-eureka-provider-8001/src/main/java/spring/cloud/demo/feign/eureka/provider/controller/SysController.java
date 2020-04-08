@@ -37,7 +37,8 @@ public class SysController {
 
     @GetMapping(value = "/getPort")
     @ResponseBody
-    public String getPort(){
+    public String getPort() throws InterruptedException {
+        Thread.sleep(3000);
         return "8001";
     }
 }
