@@ -5,13 +5,14 @@ spring-cloud-demo包含Spring cloud多个模块，每个模块都是最基础的
 |模块|说明|
 |:---|:---|
 |spring-cloud-demo-eureka|springCloud-eureka服务注册与发现|
+|spring-cloud-demo-zookeeper|springCloud-zookeeper服务注册与发现|
+|spring-cloud-demo-consul|springCloud-consul服务注册与发现|
+
 |spring-cloud-demo-ribbon|springCloud-ribbon负载均衡|
 |spring-cloud-demo-feign|springCloud-feign负载均衡|
 |spring-cloud-demo-hystrix|springCloud-hystrix断路器|
 |spring-cloud-demo-zuul|springCloud-zuul路由网关|
 |spring-cloud-demo-config|springCloud-config配置文件|
-|spring-cloud-demo-zookeeper|springCloud-zookeeper服务注册与发现|
-|spring-cloud-demo-consul|springCloud-consul服务注册与发现|
 
 # Spring Cloud学习教程
 
