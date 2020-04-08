@@ -7,7 +7,6 @@ spring-cloud-demo包含Spring cloud多个模块，每个模块都是最基础的
 |spring-cloud-demo-eureka|springCloud-eureka服务注册与发现|
 |spring-cloud-demo-zookeeper|springCloud-zookeeper服务注册与发现|
 |spring-cloud-demo-consul|springCloud-consul服务注册与发现|
-
 |spring-cloud-demo-ribbon|springCloud-ribbon负载均衡|
 |spring-cloud-demo-feign|springCloud-feign负载均衡|
 |spring-cloud-demo-hystrix|springCloud-hystrix断路器|
