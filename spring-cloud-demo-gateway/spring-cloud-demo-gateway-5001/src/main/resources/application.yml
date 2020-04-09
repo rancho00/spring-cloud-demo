@@ -1,0 +1,22 @@
+server:
+  port: 5001
+
+spring:
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+      routes:
+        - id: sys-provider
+          #uri: http://localhost:8001
+          uri: lb://sys-provider
+          predicates:
+            - Path=/sys/**
+            - Method=GET
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka/

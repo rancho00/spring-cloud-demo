@@ -10,6 +10,7 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>spring-cloud-demo-consul</module>
+        <module>spring-cloud-demo-gateway</module>
     </modules>
 
     <properties>
