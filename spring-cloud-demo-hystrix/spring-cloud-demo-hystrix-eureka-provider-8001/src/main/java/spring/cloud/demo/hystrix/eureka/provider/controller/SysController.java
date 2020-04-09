@@ -41,7 +41,14 @@ public class SysController {
 
     @GetMapping(value = "/getPort")
     @HystrixCommand(fallbackMethod = "getPortHystrix", commandProperties = {
-            @HystrixProperty(name = "execution.isolation.thread.timeoutInMilliseconds",value = "3000")
+            @HystrixProperty(name = "execution.isolation.thread.timeoutInMilliseconds",value = "3000"), //超时3秒走fallback方法
+            /**
+             * 10秒内，有10次请求，百分之60都失败，则熔断
+             */
+            @HystrixProperty(name = "circuitBreaker.enabled",value = "true"), //开启熔断
+            @HystrixProperty(name = "circuitBreaker.requestVolumeThreshold",value = "10"), //10次请求触发
+            @HystrixProperty(name = "circuitBreaker.sleepWindowInMilliseconds",value = "10000"), //时间窗口期
+            @HystrixProperty(name = "circuitBreaker.errorThresholdPercentage",value = "60") //错误百分比
     })
     @ResponseBody
     public String getPort(){
