@@ -4,5 +4,5 @@ spring:
     config:
       name: application-client
       profile: dev
-      label: master
+      label: master #master分支
       uri: http://config4001.com:4001

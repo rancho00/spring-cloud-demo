@@ -1,3 +1,10 @@
 spring:
   application:
     name: config-client
+
+#暴露所有端点，动态刷新要用/actuator/refresh
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
