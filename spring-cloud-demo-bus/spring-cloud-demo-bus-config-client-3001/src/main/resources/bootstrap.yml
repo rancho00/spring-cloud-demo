@@ -1,0 +1,24 @@
+#系统级的，优先级更高
+spring:
+  cloud:
+    config:
+      name: application-client
+      profile: dev
+      label: master #master分支
+      uri: http://config4001.com:4001
+  application:
+    name: bus-config-client-3001
+  rabbitmq:
+    host: 192.168.0.103
+    port: 5672
+    username: guest
+    password: guest
+
+#暴露所有端点，动态刷新要用/actuator/refresh
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+server:
+  port: 3001

@@ -1,0 +1,24 @@
+server:
+  port: 4001
+spring:
+  application:
+    name: bus-config-server
+  profiles:
+    active: native
+  cloud:
+    config:
+      server:
+        native:
+          search-locations: "E:/IdeaProjects/rancho-demo-master/spring-cloud-demo/spring-cloud-demo-bus"
+  rabbitmq:
+    host: 192.168.0.103
+    port: 5672
+    username: guest
+    password: guest
+
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: 'bus-refresh'

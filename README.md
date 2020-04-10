@@ -13,6 +13,7 @@ spring-cloud-demo包含Spring cloud多个模块，每个模块都是最基础的
 |spring-cloud-demo-feign|springCloud-feign负载均衡|
 |spring-cloud-demo-hystrix|springCloud-hystrix断路器|
 |spring-cloud-demo-config|springCloud-config配置文件|
+|spring-cloud-demo-bus|springCloud-bus消息总线|
 
 # Spring Cloud学习教程
 
