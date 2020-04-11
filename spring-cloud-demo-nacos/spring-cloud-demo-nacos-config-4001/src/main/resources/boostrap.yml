@@ -1,5 +1,0 @@
-server:
-  port: 4001
-spring:
-  application:
-    name: nacos-config-client

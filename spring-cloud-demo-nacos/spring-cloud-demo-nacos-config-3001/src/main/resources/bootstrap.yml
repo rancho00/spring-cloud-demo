@@ -1,0 +1,12 @@
+server:
+  port: 3001
+spring:
+  application:
+    name: nacos-config-client
+  cloud:
+    nacos:
+      config:
+        server-addr: 192.168.0.103:8848
+        file-extension: yaml #yaml格式的文件
+        group: DEV_GROUP #指定组，默认default_group
+        namespace: 50c25bb9-eb81-4d87-8c8f-d61db23c1ede #指定namespace，默认public
