@@ -1,0 +1,14 @@
+server:
+  port: 8002
+spring:
+  application:
+    name: nacos-sys-provider
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 192.168.0.103:8848
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
