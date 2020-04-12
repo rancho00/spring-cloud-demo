@@ -1,0 +1,15 @@
+server:
+  port: 8001
+spring:
+  application:
+    name: sentinel-sys-provider
+  cloud:
+    sentinel:
+      transport:
+        dashboard: localhost:8081
+        port: 8719
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
