@@ -1,0 +1,13 @@
+server:
+  port: 9001
+spring:
+  application:
+    name: nacos-sys-consume
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 192.168.0.103:8848
+#启动feign对sentinel的使用
+feign:
+  sentinel:
+    enabled: true

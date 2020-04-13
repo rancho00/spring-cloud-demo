@@ -1,0 +1,26 @@
+server:
+  port: 8001
+spring:
+  application:
+    name: nacos-sys-provider
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 192.168.0.103:8848
+    sentinel:
+      transport:
+        dashboard: localhost:8081
+        port: 8719
+      datasource:
+        ds1:
+          nacos:
+            server-addr: 192.168.0.103:8848
+            dataId: ${spring.application.name}
+            groupId: DEFAULT_GROUP
+            data-type: json
+            rule-type: flow
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
