@@ -1,5 +1,6 @@
 package spring.cloud.demo.sentinel.nacos.provider.controller;
 
+import com.alibaba.csp.sentinel.annotation.SentinelResource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
@@ -15,7 +16,7 @@ import java.util.List;
 @Controller
 public class SysController {
 
-    @GetMapping(value = "/getPort")
+    @GetMapping(value = "/getPort1")
     @ResponseBody
     public String getPort(){
         return "8002";

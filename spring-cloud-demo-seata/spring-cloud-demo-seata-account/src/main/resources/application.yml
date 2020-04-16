@@ -1,0 +1,32 @@
+server:
+  port: 8001
+
+#spring配置
+spring:
+  application:
+    name: seata-account-service
+  datasource:
+    url: jdbc:mysql://192.168.0.103:3306/seata_account
+    username: root
+    password: 123456
+    druid:
+      initial-size: 5
+      min-idle: 10
+      max-active: 20
+  #时间转换成毫秒
+  jackson:
+    serialization:
+      write-dates-as-timestamps: true
+  cloud:
+    alibaba:
+      seata:
+        tx-service-group: my_test_tx_group
+    nacos:
+      discovery:
+        server-addr: 192.168.0.103:8848
+
+#mybatis配置
+#开启驼峰
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
