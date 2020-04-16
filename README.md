@@ -14,8 +14,9 @@ spring-cloud-demo包含Spring cloud多个模块，每个模块都是最基础的
 |spring-cloud-demo-hystrix|springCloud-hystrix断路器|
 |spring-cloud-demo-config|springCloud-config配置文件|
 |spring-cloud-demo-bus|springCloud-bus消息总线|
-|spring-cloud-demo-nacos|springCloud-nacos|
-|spring-cloud-demo-sentinel|springCloud-sentinel|
+|spring-cloud-demo-nacos|springCloud-nacos动态服务注册、发现以及服务配置|
+|spring-cloud-demo-sentinel|springCloud-sentinel熔断、降级、控流|
+|spring-cloud-demo-seata|springCloud-seata分布式事务|
 
 # Spring Cloud学习教程
 
