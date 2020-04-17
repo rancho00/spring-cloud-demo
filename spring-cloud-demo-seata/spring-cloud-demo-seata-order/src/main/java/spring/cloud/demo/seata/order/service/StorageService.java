@@ -1,8 +1,8 @@
 package spring.cloud.demo.seata.order.service;
 
-import org.apache.ibatis.annotations.Param;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.Map;
 
@@ -10,5 +10,5 @@ import java.util.Map;
 public interface StorageService {
 
     @PostMapping("/storage/decrease")
-    Map<String,Object> decrease(@Param("productId") Long productId, @Param("count")Integer count);
+    Map<String,Object> decrease(@RequestParam("productId") Long productId, @RequestParam("count")Integer count);
 }

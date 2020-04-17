@@ -1,5 +1,5 @@
 server:
-  port: 8001
+  port: 8002
 
 #spring配置
 spring:
@@ -30,3 +30,6 @@ spring:
 mybatis:
   configuration:
     map-underscore-to-camel-case: true
+logging:
+  level:
+    spring.cloud.demo.seata.account: debug

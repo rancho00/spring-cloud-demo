@@ -1,5 +1,6 @@
 package spring.cloud.demo.seata.order.service.impl;
 
+import io.seata.spring.annotation.GlobalTransactional;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -23,6 +24,7 @@ public class OrderServiceImpl implements OrderService {
     private AccountService accountService;
 
     @Override
+    @GlobalTransactional
     public void create(Order order) {
         log.info("-------->开始创建订单");
         orderMapper.create(order);

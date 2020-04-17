@@ -1,8 +1,8 @@
 package spring.cloud.demo.seata.order.service;
 
-import org.apache.ibatis.annotations.Param;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import java.math.BigDecimal;
 import java.util.Map;
@@ -11,5 +11,5 @@ import java.util.Map;
 public interface AccountService {
 
     @PostMapping("/account/decrease")
-    Map<String,Object> decrease(@Param("userId")Long userId, @Param("money")BigDecimal money);
+    Map<String,Object> decrease(@RequestParam("userId")Long userId, @RequestParam("money")BigDecimal money);
 }
