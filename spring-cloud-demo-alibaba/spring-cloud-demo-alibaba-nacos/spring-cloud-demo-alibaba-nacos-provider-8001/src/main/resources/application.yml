@@ -1,0 +1,14 @@
+server:
+  port: 8001
+spring:
+  application:
+    name: nacos-sys-provider #服务名
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 192.168.0.103:8848 #nacos地址
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*" #暴露端点
