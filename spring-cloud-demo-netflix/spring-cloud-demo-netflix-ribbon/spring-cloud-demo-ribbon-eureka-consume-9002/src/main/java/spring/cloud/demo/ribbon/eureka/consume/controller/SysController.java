@@ -15,12 +15,6 @@ public class SysController {
     @Autowired
     private RestTemplate restTemplate;
 
-    @GetMapping("/discovery")
-    @ResponseBody
-    public Object discovery(){
-        return restTemplate.getForObject("http://USER-PROVIDER/sys/discovery",Object.class);
-    }
-
     @GetMapping("/getPort")
     @ResponseBody
     public String getPort(){

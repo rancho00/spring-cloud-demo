@@ -30,8 +30,8 @@ public class RibbonEurekaConsume9002Application {
      * 定义负载均衡为随机
      * @return
      */
-    @Bean
-    public IRule randomRule(){
-        return new RandomRule();
-    }
+//    @Bean
+//    public IRule randomRule(){
+//        return new RandomRule();
+//    }
 }
