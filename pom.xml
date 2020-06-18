@@ -10,6 +10,7 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>spring-cloud-demo-alibaba</module>
+        <module>spring-cloud-demo-netflix</module>
     </modules>
 
     <properties>
