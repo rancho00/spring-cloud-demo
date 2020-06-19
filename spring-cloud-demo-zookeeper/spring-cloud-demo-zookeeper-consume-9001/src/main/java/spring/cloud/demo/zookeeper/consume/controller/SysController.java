@@ -15,16 +15,16 @@ import java.net.URI;
 
 
 @RestController
-@RequestMapping("/hello")
+@RequestMapping("/sys")
 @Slf4j
-public class HelloController {
+public class SysController {
 
     @Autowired
     private RestTemplate restTemplate;
 
-    @RequestMapping("/sayHello")
-    public String sayHello(){
-        return restTemplate.getForObject("http://user-provider/hello/sayHello",String.class);
+    @RequestMapping("/getPort")
+    public String getPort(){
+        return restTemplate.getForObject("http://user-provider/sys/getPort",String.class);
     }
 
 }

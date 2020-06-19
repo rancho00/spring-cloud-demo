@@ -4,11 +4,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/hello")
-public class HelloController {
+@RequestMapping("/sys")
+public class SysController {
 
-    @RequestMapping("/sayHello")
-    public String sayHello(){
-        return "hello";
+    @RequestMapping("/getPort")
+    public String getPort(){
+        return "8001";
     }
 }
