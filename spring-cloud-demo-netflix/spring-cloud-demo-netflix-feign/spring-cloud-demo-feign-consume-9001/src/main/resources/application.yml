@@ -9,12 +9,3 @@ eureka:
       defaultZone: http://eureka7001.com:7001/eureka/
 ribbon:
   ReadTimeout: 5000 #超时设置
-
-logging:
-  level:
-    spring:
-      cloud:
-        demo:
-          feign:
-            consume:
-              service: debug
