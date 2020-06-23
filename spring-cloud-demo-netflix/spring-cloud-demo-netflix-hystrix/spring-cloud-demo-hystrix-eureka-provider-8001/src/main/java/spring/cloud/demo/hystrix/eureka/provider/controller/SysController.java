@@ -51,24 +51,20 @@ public class SysController {
             @HystrixProperty(name = "circuitBreaker.errorThresholdPercentage",value = "60") //错误百分比
     })
     @ResponseBody
-    public String getPort(){
-        throw new RuntimeException();
-        //return "8001";
+    public String getPort(int count){
+        if(count%2==0){
+           return "8001";
+        }else{
+            throw new RuntimeException();
+        }
     }
 
-    public String getPortHystrix(){
+    /**
+     * getPort的兜底方法
+     * @return
+     */
+    public String getPortHystrix(int count){
         return "getPortHystrix";
     }
 
-    @GetMapping(value = "/getPort1")
-    @ResponseBody
-    public String getPort1(){
-        throw new RuntimeException();
-        //return "8001";
-    }
-
-
-    public String sysFallback(){
-        return "000";
-    }
 }
