@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/spring-cloud-demo-netflix/spring-cloud-demo-zuul/spring-cloud-demo-zuul-5001/spring-cloud-demo-zuul-5001.iml" filepath="$PROJECT_DIR$/spring-cloud-demo-netflix/spring-cloud-demo-zuul/spring-cloud-demo-zuul-5001/spring-cloud-demo-zuul-5001.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-cloud-demo-netflix/spring-cloud-demo-zuul/spring-cloud-demo-zuul-eureka-provider-8001/spring-cloud-demo-zuul-eureka-provider-8001.iml" filepath="$PROJECT_DIR$/spring-cloud-demo-netflix/spring-cloud-demo-zuul/spring-cloud-demo-zuul-eureka-provider-8001/spring-cloud-demo-zuul-eureka-provider-8001.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-cloud-demo-netflix/spring-cloud-demo-zuul/spring-cloud-demo-zuul-eureka-server-7001/spring-cloud-demo-zuul-eureka-server-7001.iml" filepath="$PROJECT_DIR$/spring-cloud-demo-netflix/spring-cloud-demo-zuul/spring-cloud-demo-zuul-eureka-server-7001/spring-cloud-demo-zuul-eureka-server-7001.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-cloud-demo-netflix/spring-cloud-demo-zuul/spring-cloud-demo-zuul-feign-consume-9001/spring-cloud-demo-zuul-feign-consume-9001.iml" filepath="$PROJECT_DIR$/spring-cloud-demo-netflix/spring-cloud-demo-zuul/spring-cloud-demo-zuul-feign-consume-9001/spring-cloud-demo-zuul-feign-consume-9001.iml" />
+    </modules>
+  </component>
+</project>
