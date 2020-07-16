@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50727
 File Encoding         : 65001
 
-Date: 2020-07-16 11:36:10
+Date: 2020-07-16 11:56:52
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -26,7 +26,12 @@ CREATE TABLE `t_account` (
   `used` decimal(10,0) DEFAULT NULL COMMENT '已用额度',
   `residue` decimal(10,0) DEFAULT NULL COMMENT '剩余额度',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='用户';
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COMMENT='用户';
+
+-- ----------------------------
+-- Records of t_account
+-- ----------------------------
+INSERT INTO `t_account` VALUES ('1', '1', '100', '0', '100');
 
 -- ----------------------------
 -- Table structure for undo_log
@@ -44,3 +49,7 @@ CREATE TABLE `undo_log` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `ux_undo_log` (`xid`,`branch_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='AT transaction mode undo table';
+
+-- ----------------------------
+-- Records of undo_log
+-- ----------------------------

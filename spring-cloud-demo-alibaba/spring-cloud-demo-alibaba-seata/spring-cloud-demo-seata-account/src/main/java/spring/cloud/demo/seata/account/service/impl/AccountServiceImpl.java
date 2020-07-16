@@ -15,7 +15,6 @@ public class AccountServiceImpl implements AccountService {
 
     @Override
     public void decrease(Long userId, BigDecimal money) {
-//        Integer.parseInt("sd");
         try {
             Thread.sleep(20000);
         } catch (InterruptedException e) {

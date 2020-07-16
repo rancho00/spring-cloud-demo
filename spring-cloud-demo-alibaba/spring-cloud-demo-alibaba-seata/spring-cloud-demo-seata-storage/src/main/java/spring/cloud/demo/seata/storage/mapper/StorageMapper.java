@@ -9,6 +9,6 @@ import java.math.BigDecimal;
 @Mapper
 public interface StorageMapper {
 
-    @Update("update t_storage set used=#{used} where product_id=#{productId}")
+    @Update("update t_storage set used=#{used},residue=total-#{used} where product_id=#{productId}")
     void decrease(@Param("productId") Long productId, @Param("used")Integer used);
 }
